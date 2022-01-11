@@ -1,0 +1,246 @@
+* {
+  box-sizing: border-box;
+}
+.product-menu-slider {
+  background-color: #a7a7a7;
+  color: #fff;
+}
+.product-menu-title {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.product-menu-title h1 {
+  font-size: 50px;
+  font-weight: bold;
+  padding: 0px;
+  margin-bottom: 20px;
+}
+.product-menu-title h3 {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 0px;
+  margin: 0px;
+}
+.product-menu-contact {
+  border-top: 1px solid #fff;
+  padding: 15px 0px;
+  display: flex;
+  justify-content: center;
+}
+.product-menu-icon {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: bold;
+  font-size: 26px;
+  font-family: "Playfair Display", serif;
+  margin: 0px;
+}
+.product-menu-icon li {
+  margin: 0px 15px;
+}
+.product-menu-icon li a {
+  text-decoration: none;
+  color: #fff;
+}
+.product-menu-icon li a :hover {
+  cursor: pointer;
+  color: #d7bd94;
+}
+.product-detail {
+  padding-top: 100px;
+}
+.product-detail-img {
+  width: 100%;
+  padding-top: 20px;
+}
+
+.product-detail-img img {
+  width: 100%;
+  object-fit: cover;
+}
+.product-detail-img-slider {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 5px solid #c8aa7b;
+}
+.carousel-caption p,
+.carousel-caption h5 {
+  text-align: center;
+  color: #f9ca24;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+}
+.product-detail-info {
+  padding: 0px 10px;
+}
+.product-detail-info h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+  /* color: #a7a7a7; */
+  margin-bottom: 0px;
+}
+.product-detail-info h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 34px;
+  font-style: italic;
+  color: #f9ca24;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #a7a7a7;
+}
+.starRate {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 15px 0px;
+}
+.reviewNumber {
+  margin-left: 15px;
+}
+.reviewNumber p {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-size: 16px;
+  color: #a7a7a7;
+  margin-bottom: 0px;
+}
+.stars {
+  display: inline-block;
+  color: #f9ca24;
+  font-size: 20px;
+  margin: 0 6px;
+}
+.pro-des {
+  font-family: "Playfair Display", serif;
+  color: black;
+  font-size: 19px;
+  margin-bottom: 10px;
+  font-style: italic;
+  text-align: justify;
+}
+.pro-des-attr {
+  margin-bottom: 0px;
+}
+.pro-des-attr li {
+  font-family: "Playfair Display", serif;
+  color: black;
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+.pro-des-attr li span {
+  color: #6c6c6c;
+}
+.clickBuy-control {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  /* height: 42px; */
+  padding-top: 20px;
+  border-top: 1px solid #c8aa7b;
+}
+.addToCart {
+  width: 70%;
+  padding: 0px 15px;
+  /* height: 100%; */
+  outline: none;
+  padding: 0px 30px;
+}
+.addToCart button {
+  background-color: #c8aa7b;
+  color: #fff;
+  font-family: "Mochiy Pop One", sans-serif;
+  outline: none;
+  font-size: 20px;
+  padding: 15px 0px;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 1px 2px 3px #6c6c6c;
+}
+.addToCart button:focus-within {
+  /* border: 1px solid black; */
+  background-color: #6c6c6c;
+  opacity: 0.8;
+}
+
+.quantity {
+  /* padding-top: 20px; */
+  /* margin-right: 60px; */
+  width: 30%;
+  /* border: 1px solid #6c6c6c; */
+}
+.quantity input {
+  -webkit-appearance: none;
+  border: none;
+  text-align: center;
+  width: 70%;
+  font-size: 26px;
+  color: #f9ca24;
+  font-weight: 600;
+}
+
+button[class*="btn"] {
+  width: 15%;
+  /* height: 30px; */
+  background-color: #e1e8ee;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+button:focus,
+input:focus {
+  outline: 0;
+}
+.related-product {
+  padding: 40px 0px 100px 0px;
+}
+.related-product-title {
+  text-align: center;
+  /* font-family: "Mochiy Pop One", sans-serif; */
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  color: #6c6c6c;
+  margin-bottom: 30px;
+  border-top: 1px solid #c8aa7b;
+  padding-top: 20px;
+}
+.related-product-item {
+  border: 2px solid #c8aa7b;
+  position: relative;
+  z-index: 0;
+  transition: all 0.5s;
+  background-color: #fff;
+}
+.related-product-item:hover {
+  position: relative;
+  z-index: 1;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.related-product-item-img {
+  padding: 10px;
+}
+.related-product-item-img img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 1px 2px 3px #6c6c6c;
+}
+.related-product-item-des {
+  text-align: center;
+  padding: 20px 0px;
+}
+.related-product-item-des h3 {
+  font-family: "Mochiy Pop One", sans-serif;
+  color: #6c6c6c;
+  font-size: 25px;
+}
+.related-product-item-des p {
+  font-family: "Playfair Display", serif;
+  color: #f9ca24;
+  font-size: 25px;
+  font-style: oblique;
+}

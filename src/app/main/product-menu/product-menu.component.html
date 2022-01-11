@@ -1,0 +1,79 @@
+<div class="wrap">
+  <div class="product-menu-slider">
+    <div class="container">
+      <div class="product-menu-title">
+        <h1>Products</h1>
+        <h3>Home\\Products</h3>
+      </div>
+      <div class="product-menu-contact">
+        <ul class="product-menu-icon">
+          <li>Share us on:</li>
+          <li>
+            <a href="https://www.facebook.com/nhunhong.tran.338/" target="_blank"><i class="fab fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/thai.xuan.tran/" target="_blank"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fab fa-twitter"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="product-menu-content">
+    <div class="container">
+      <div class="search-bar">
+        <div class="sort-label">Sort by: </div>
+        <div class="btn-group dropdown-menu">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="defaultDropdown" data-bs-toggle="dropdown"
+            data-bs-auto-close="true" aria-expanded="false">
+            {{selectedType}}
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+            <li *ngFor="let item of sortType"><a class="dropdown-item" href="javascript:void(0)"
+                (click)="selectedSort(item)">{{item}}</a></li>
+          </ul>
+
+        </div>
+        <div class="sort-label">Search by: </div>
+        <input class="form-control me-2" id="searchInput" placeholder="Search here" aria-label="Search"
+          [(ngModel)]="searchKey" (keyup)="search()" [ngStyle]="{'font-family': 'Playfair Display'}">
+        <button class="btn" id="btnSearch" type="button" (click)="load()"><i class="fas fa-retweet"></i></button>
+      </div>
+      <div class="product-list" id="list">
+        <div class="row item-row">
+          <div class="col-lg-3 col-md-4 col-sm-6 item-row-block" *ngFor="let item of pageData">
+            <div class="product-item">
+              <div class="product-item-img"><img src="{{item.image}}" alt=""></div>
+              <div class="product-item-des">
+                <h3>{{item.name|lowercase}}</h3>
+                <p>{{item.price|currency}}</p>
+              </div>
+            </div>
+            <div class="product-item-func"><button type="button" class="btnMore"
+                [routerLink]="['/productDetails/'+item.id]">More</button>
+              <button type="button" class="btnMore" (click)="buy(item)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination  product-pagination">
+            <li class="page-item">
+              <a class="page-link" aria-label="Previous" (click)="loadPagination(currentPage-1)">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" *ngFor="let item of pages; let i=index"
+                (click)="loadPagination(i+1)">{{i+1}}</a></li>
+            <li class="page-item" href="#list">
+              <a class="page-link" aria-label="Next" (click)="loadPagination(currentPage+1)">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="main-part3-items">
+  <div class="row">
+    <div class="col-md-3 col-sm-6" *ngFor="let prod of pageData">
+      <div class="main-part3-item">
+        <img src="{{prod.image}}" alt="">
+        <h3>{{prod.name|lowercase}}</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quas similique voluptatum repellat
+          explicabo labore.</p>
+        <h3 class="priceTag">{{prod.price|currency}}</h3>
+        <div class="button-control"><button type="button" class="btnAdd" (click)="buy(prod)"><i
+              class="fas fa-shopping-cart"> Add to
+              cart</i></button></div>
+      </div>
+    </div>
+    <nav aria-label="Page navigation example">
+      <ul class="pagination  product-pagination">
+        <li class="page-item">
+          <a class="page-link" aria-label="Previous" (click)="loadPagination(currentPage-1)">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li class="page-item"><a class="page-link" *ngFor="let item of pages; let i=index"
+            (click)="loadPagination(i+1)">{{i+1}}</a></li>
+        <li class="page-item">
+          <a class="page-link" aria-label="Next" (click)="loadPagination(currentPage+1)">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

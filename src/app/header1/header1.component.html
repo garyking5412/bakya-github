@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Katarina Bakery Store</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="wrap wrap-header">
+      <section class="header">
+        <div class="top-bar">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 col-sm-6">
+                <div class="top-bar-menu-1">
+                  <ul class="menu-1">
+                    <li><a href="#">Welcome to Katarina Bakery</a></li>
+                    <li><a href="tel:0339882065">Call: 0339882065</a></li>
+                    <!-- <li>
+                                        <ul class="navbar-nav">
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle language-dropdown" href="#"
+                                                    id="navbarDarkDropdownMenuLink" role="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Language
+                                                </a>
+                                                <ul class="dropdown-menu dropdown-menu-dark language-dropdown-menu"
+                                                    aria-labelledby="navbarDarkDropdownMenuLink">
+                                                    <li><a class="dropdown-item" href="#">English</a></li>
+                                                    <li>
+                                                        <hr class="dropdown-divider">
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#">Vietnamese</a></li>
+                                                    <li>
+                                                        <hr class="dropdown-divider">
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#">Japanese</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li> -->
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-0"></div>
+              <div class="col-md-4 col-sm-6">
+                <div class="top-bar-menu-2">
+                  <ul class="menu-2">
+                    <li>
+                      <a
+                        href="javascript:void(0)"
+                        data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop"
+                        >My Account</a
+                      >
+                      <!-- login -->
+                      <div
+                        class="modal fade"
+                        id="staticBackdrop"
+                        data-bs-backdrop="static"
+                        data-bs-keyboard="false"
+                        tabindex="-1"
+                        aria-labelledby="staticBackdropLabel"
+                        aria-hidden="true"
+                      >
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="login-banner">
+                              <h1>Login</h1>
+                            </div>
+                            <div class="login-main">
+                              <div class="login-title">
+                                <h3>Welcome Back !</h3>
+                                <p>Login by entering the information below.</p>
+                              </div>
+                              <div class="login-info">
+                                <div class="d-flex">
+                                  <div class="col-md-2"></div>
+                                  <div class="col-md-8">
+                                    <form action="#" [formGroup]="frmLogin">
+                                      <table class="input-table">
+                                        <tr>
+                                          <td>
+                                            <input
+                                              type="text"
+                                              id="loginUsername"
+                                              name="email"
+                                              value=""
+                                              placeholder="Username*"
+                                              formControlName="username"
+                                              [(ngModel)]="username"
+                                            />
+                                            <!-- <p
+                                              *ngIf="frmLogin.get('username')?.errors?.['required']"
+                                            >
+                                              insert username!
+                                            </p> -->
+                                            <!-- <p *ngIf="frmLogin.get('username')?.errors?.['minlength(8)']">username at
+                                            least 8 characters</p> -->
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <input
+                                              type="password"
+                                              id="loginPassword"
+                                              name="password"
+                                              value=""
+                                              placeholder="Password*"
+                                              formControlName="password"
+                                              [(ngModel)]="password"
+                                            />
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </form>
+                                    <div class="login-ctrl">
+                                      <input type="radio" id="remember" /><span
+                                        >&nbsp;Remember my login</span
+                                      >
+                                      <div class="ctrl-button">
+                                        <button
+                                          type="submit"
+                                          class="btnLogin"
+                                          (click)="login()"
+                                        >
+                                          Login
+                                        </button>
+                                        <button
+                                          type="button"
+                                          class="btn btn-secondary btnLogin"
+                                          data-bs-dismiss="modal"
+                                        >
+                                          Cancel
+                                        </button>
+                                      </div>
+                                      <div class="register">
+                                        <h4>
+                                          Don't have an account?.
+                                          <a
+                                            href="javascript:void(0)"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#register"
+                                            >Create one here.</a
+                                          >
+                                        </h4>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-2"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- signUp -->
+                      <div
+                        class="modal fade"
+                        id="register"
+                        data-bs-backdrop="static"
+                        data-bs-keyboard="false"
+                        tabindex="-1"
+                        aria-labelledby="staticBackdropLabel"
+                        aria-hidden="true"
+                      >
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="login-banner">
+                              <h1>Register</h1>
+                            </div>
+                            <div class="login-main">
+                              <div class="login-title">
+                                <h3>Welcome !</h3>
+                                <p>
+                                  Sign up by entering the information below.
+                                </p>
+                              </div>
+                              <div class="login-info">
+                                <div class="d-flex">
+                                  <div class="col-md-2"></div>
+                                  <div class="col-md-8">
+                                    <form>
+                                      <table class="input-table">
+                                        <tr>
+                                          <td>
+                                            <input
+                                              type="text"
+                                              id="registerUsername"
+                                              name=""
+                                              value=""
+                                              placeholder="Username*"
+                                              [(ngModel)]="user.username"
+                                            />
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <input
+                                              type="password"
+                                              id="registerPassword"
+                                              name="password"
+                                              value=""
+                                              placeholder="Password*"
+                                              [(ngModel)]="user.password"
+                                            />
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <input
+                                              type="password"
+                                              id="confirmPassword"
+                                              name="password"
+                                              value=""
+                                              placeholder="Confim your password*"
+                                            />
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </form>
+                                    <div class="login-ctrl">
+                                      <!-- <input type="radio" id="remember"><span>&nbsp;Remember my login</span> -->
+                                      <div class="ctrl-button">
+                                        <button
+                                          type="submit"
+                                          class="btnLogin"
+                                          (click)="register()"
+                                        >
+                                          Sign Up
+                                        </button>
+                                        <button
+                                          type="button"
+                                          class="btn btn-secondary btnLogin"
+                                          data-bs-dismiss="modal"
+                                        >
+                                          Cancel
+                                        </button>
+                                      </div>
+                                      <!-- <div class="register">
+                                      <h4>Don't have an account?. <a href="javascript:void(0)" data-bs-toggle="modal"
+                                          data-bs-target="#staticBackdrop">Create one here.</a></h4>
+                                    </div> -->
+                                    </div>
+                                  </div>
+                                  <div class="col-md-2"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                          <a
+                            class="nav-link dropdown-toggle language-dropdown"
+                            href="#"
+                            id="navbarDarkDropdownMenuLink"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            Language
+                          </a>
+                          <ul
+                            class="
+                              dropdown-menu dropdown-menu-dark
+                              language-dropdown-menu
+                            "
+                            aria-labelledby="navbarDarkDropdownMenuLink"
+                          >
+                            <li>
+                              <a class="dropdown-item" href="#">English</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">Vietnamese</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">Japanese</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="brand">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2 col-sm-0">
+                <div class="brand-logo">
+                  <img
+                    src="assets\img\images\images\images\images\Screenshot_2.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <!-- <div class="col-md-3 col-sm-0"></div> -->
+              <div class="col-md-10 col-sm-12">
+                <nav class="navbar nav-bar-menu-ngang">
+                  <ul class="menu-ngang">
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        aria-current="page"
+                        routerLink="main"
+                        id="nav-HomePage"
+                        data-type="active"
+                        >Home</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        routerLink="about"
+                        data-type="inactive"
+                        >About</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        routerLink="product"
+                        data-type="inactive"
+                        >Product</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-type="inactive">Offers</a>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        href="javascript:void(0)"
+                        data-type="inactive"
+                        >DOTD</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        href="javascript:void(0)"
+                        data-type="inactive"
+                        >Contact</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link">
+                        <!-- <input class="form-control me-2 nav-link" id="searchInput" data-type="active" type="search"
+                        placeholder="Search here" aria-label="Search">
+                      <button class="btnSearch" type="button" (click)="toggleSearchBar()"><i
+                          class="fas fa-search"></i></button> -->
+                        <button type="button" class="btnSearch">
+                          <i class="fas fa-search"></i>
+                        </button>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="btnCart" href="javascript:void(0)"
+                        ><i class="fas fa-shopping-cart"></i
+                        ><span>&nbsp;({{ carts.length }})</span></a
+                      >
+                      <div class="shop" id="cart" data-type="active">
+                        <table [cellPadding]="5" [cellSpacing]="0">
+                          <tr *ngFor="let item of carts">
+                            <td>
+                              <div class="item-name">
+                                <h5>{{ item.product.name }}</h5>
+                                <p>{{ item.product.price | currency }}</p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="item-quantity">
+                                <p><span>x</span>{{ item.quantity }}</p>
+                                <!-- <p>{{}}</p> -->
+                              </div>
+                            </td>
+                            <td>
+                              <div class="button-control">
+                                <button type="button" (click)="remove(item)">
+                                  <i class="fas fa-trash"></i>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
+                        <div class="sub-total">
+                          <p>Sub Total</p>
+                          <p>{{ sum() | currency }}</p>
+                        </div>
+                        <div class="cart-control">
+                          <button class="btnViewCart">View Cart</button>
+                          <button class="btnViewCart">Check Out</button>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

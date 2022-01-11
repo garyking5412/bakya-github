@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+}
+.upper-footer {
+  background-color: #242424;
+  padding: 100px 0px 100px 0px;
+}
+.lbl {
+  color: #fff;
+  font-size: 25px;
+  font-family: "Playfair Display", serif;
+  padding: 0px;
+  margin-bottom: 30px;
+  color: #c8aa7b;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.bakya-photo-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+.bakya-photo-items img {
+  transform: scale(1);
+  transition: all 0.5s;
+}
+.bakya-photo-items img:hover {
+  transform: scale(1.3);
+  cursor: pointer;
+  position: inherit;
+  z-index: 2;
+}
+.recent-item {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+.recent-item-img {
+  width: 30%;
+}
+.recent-item-content {
+  width: 70%;
+}
+.recent-item-img img {
+  width: 100%;
+  object-fit: cover;
+  padding: 2px 5px;
+  border-radius: 10px;
+}
+.recent-item-content {
+  padding: 0 5px;
+}
+.recent-item-content > a {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.5s;
+}
+.recent-item-content > a:hover {
+  color: #c8aa7b;
+}
+.recent-item-content > a > h5 {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  margin: 0px;
+}
+.recent-item-content p {
+  font-size: 14px;
+  margin: 5px 0px;
+  font-weight: lighter;
+  color: #fff;
+  font-family: "Times New Roman", Times, serif;
+}
+.bakya-photo-items > img {
+  width: 33.3333333%;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 5px;
+}
+.bakya-address-footer ul li {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.bakya-address-footer ul li a {
+  color: #c8aa7b;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+.bakya-address-footer ul li a:hover {
+  color: #2ecc71;
+}
+.bakya-contact-footer p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: lighter;
+  font-family: "Times New Roman", Times, serif;
+  text-align: left;
+  padding-right: 20px;
+}
+.bakya-contact-icon ul {
+  display: flex;
+  /* justify-content: space-evenly; */
+}
+.bakya-contact-icon li a {
+  font-size: 40px;
+  color: #c8aa7b;
+  transition: all 0.5s;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-right: 20px;
+}
+.bakya-contact-icon li a:hover {
+  color: #2ecc71;
+}

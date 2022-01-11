@@ -1,0 +1,138 @@
+<div class="main-part1">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+        <div class="main-part1-first-half" id="about">
+          <h1>Bakya is one of the oldest in the US</h1>
+          <h4>History of the store</h4>
+          <p>
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus maiores praesentium nisi reiciendis
+            cupiditate, quos temporibus, explicabo voluptates ipsa quibusdam deleniti, error blanditiis a cum voluptas
+            ab fugit recusandae natus delectus voluptatem debitis inventore voluptate omnis repellendus! Nobis, illum
+            esse!"</p>
+          <img src="assets\img\intro-1601499029.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-md-1 col-md-0"></div>
+      <div class="col-md-5 col-sm-6">
+        <div class="main-part1-second-half">
+          <img src="assets\img\foody-upload-api-foody-mobile-ava-200610143315.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="main-part2">
+  <div class="main-part2-leftbg"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-6">
+        <div class="main-part2-first-half">
+          <div class="main-part2-first-half-content">
+            <h1>Deal of the day</h1>
+            <h5>GET 30% OFF YOUR ORDER OF $100 OR MORE</h5>
+            <h3>Coffe Cake</h3>
+            <h4><span>$8,75</span>Now only $2.75</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam voluptas saepe placeat fugiat ipsa
+              repellendus
+              architecto. Sapiente amet recusandae itaque rerum maiores, quod deserunt, doloremque ullam obcaecati
+              accusamus
+              voluptates non.</p>
+            <div class="count-down-clock"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="main-part2-second-half">
+          <img src="assets\img\foody-upload-api-foody-mobile-ava-200610143315.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="this_week_offer" id="offers">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xl-12">
+        <div class="this_week_offer_title">
+          <h3>This week Offers</h3>
+          <p>DISCOUNT CAKE</p>
+        </div>
+        <div class="this_week_offer_content">
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <div class="this_week_offer_content_img">
+                <img src="{{displayItem.image}}" alt="">
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="this_week_offer_content_des">
+                <!-- <h3>{{displayItem.name|lowercase}}</h3> -->
+                <a href="javascripts:void(0)"
+                  [routerLink]="['/productDetails/'+displayItem.id]">{{displayItem.name|lowercase}}</a>
+                <div class="this_week_offer_content_des_item">
+                  <p>{{displayItem.price|currency}} &nbsp;&nbsp;<span>{{displayItem.price|currency}} </span></p>
+                  <div class="stars">
+                    <!-- <form action="">
+                      <input class="star star-5" id="star-5" type="radio" name="star" />
+                      <label class="star star-5" for="star-5"></label>
+                      <input class="star star-4" id="star-4" type="radio" name="star" />
+                      <label class="star star-4" for="star-4"></label>
+                      <input class="star star-3" id="star-3" type="radio" name="star" />
+                      <label class="star star-3" for="star-3"></label>
+                      <input class="star star-2" id="star-2" type="radio" name="star" />
+                      <label class="star star-2" for="star-2"></label>
+                      <input class="star star-1" id="star-1" type="radio" name="star" />
+                      <label class="star star-1" for="star-1"></label>
+                    </form> -->
+                    <div class="stars" *ngFor="let item of showRate(displayItem)"><i class="fas fa-star"></i></div>
+                  </div>
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum voluptatum voluptatem atque!
+                  Doloribus similique commodi accusantium vitae optio officia quaerat? Quaerat sed asperiores
+                  deserunt sunt velit,.</p>
+                <div class="this_week_offer_content_des_slider">
+                  <!-- <div class="multiple-items">
+                    <div class="slider-item" *ngFor="let item of offers">
+                      <img src="{{item.image}}" alt="" (click)="showItems(item.id)">
+                    </div>
+                  </div> -->
+                  <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"
+                    (init)="slickInit()" (breakpoint)="breakpoint()" (afterChange)="afterChange()"
+                    (beforeChange)="beforeChange()">
+                    <div ngxSlickItem *ngFor="let slide of offers" class="slide slider-item">
+                      <img src="{{ slide.image }}" alt="" width="100%" (click)="showItems(slide.id)">
+                    </div>
+                  </ngx-slick-carousel>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="introduction" id="products">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="main-part3-title">
+          <h1>Our latest bakery products</h1>
+          <h5>Our best of cake</h5>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb main-part3-nav" name>
+          <li class="breadcrumb-item"><a routerLink="cake">Cake</a></li>
+          <li class="breadcrumb-item"><a routerLink="bread">Bread</a></li>
+          <li class="breadcrumb-item"><a href="javascript:void(0)">Birthday Cake</a></li>
+          <li class="breadcrumb-item"><a href="javascript:void(0)">Wedding Cake</a></li>
+        </ol>
+      </nav>
+      <router-outlet (activate)="onActive($event)"></router-outlet>
+    </div>
+  </div>
+</div>
